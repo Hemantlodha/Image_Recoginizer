@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970685622426",
+    "project_id": "image-recoginizer",
+    "storage_bucket": "image-recoginizer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970685622426:android:c52a488564bde0f5811723",
+        "android_client_info": {
+          "package_name": "com.example.image_recoginizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970685622426-cb7fjai6l0vmfkjr2ppcqu0k5qp3pk6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdB3xYu8GElHtKfcm1VjTdsjC42g0__1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970685622426-cb7fjai6l0vmfkjr2ppcqu0k5qp3pk6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
