@@ -20,27 +20,28 @@ public class Data extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Image(image blob)");
+        db.execSQL("create table Image(prid integer,image blob)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop table if exists Image");
     }
-    public boolean insertdata(byte[] img){
+    public boolean insertdata(Integer id,byte[] img){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
+        cv.put("prid",id);
         cv.put("image",img);
         long result = db.insert("Image",null,cv);
         if(result==-1)
             return false;
         return true;
     }
-    public boolean deletedata(byte[] img){
+    public boolean deletedata(Integer id){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor=db.rawQuery("select * from Image where image=?",new String[]{String.valueOf(img)});
+        Cursor cursor=db.rawQuery("select * from Image where prid=?",new String[]{String.valueOf(id)});
         if(cursor.getCount()>0) {
-            long result = db.delete("Student", "image=?",new String[]{String.valueOf(img)});
+            long result = db.delete("Image", "prid=?",new String[]{String.valueOf(id)});
             if (result == -1)
                 return false;
             return true;
